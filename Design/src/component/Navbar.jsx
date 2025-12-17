@@ -1,55 +1,56 @@
-import React, { Component, useState } from 'react'
-import Container from './Container'
+import React, { useState } from 'react'
 import {motion} from 'motion/react'
 
 const Navbar = () => {
-    const NavItems=[
-        {
-            id:1,
-            title:"Home",
-            href:"/home"
-        },
-        {
-            id:2,
-            title:"About",
-            href:"/about"
-        },
-        {
-            id:3,
-            title:"Services",
-            href:"/services"
-        },
-        {
-            id:4,
-            title:"Contact",
-            href:"/contact"
-        }
-    ]
-    const [hovered,setHovered]=useState();
+  const Navitems=[
+    {
+      id:1,
+      title:"Home",
+      href:"/home"
+    },
+    {
+      id:2,
+      title:"About",
+      href:"/about"
+    }
+    ,{
+      id:3,
+      title:"Contact",
+      href:"/contact"
+    },
+    {
+      id:4,
+      title:"Testimonials",
+      href:"/testimonial"
+    }
+  ]
+  const [hovered,setHovered]=useState();
+  
+
   return (
-    <Container>
-    <div className='relative z-40 w-4xl flex flex-row  items-center justify-around mx-10'>
-        <img src="/profile.jpg" width="100px" height="50px" className='w-10 h-10 rounded-full '></img>
-        <div className=''>
-        {NavItems.map((item,index)=>(
-           
-                <a href={item.href} key={index} className='relative '
-                onMouseEnter={()=>setHovered(index)}
-                onMouseLeave={()=>setHovered(null)}>
 
-                    {hovered === index && 
-                    (<motion.span layoutId='hovered-rover' className='h-full w-full absolute  bg-white inset-0'>
-                    </motion.span>)}
+    <div className='w-auto top-0 relative z-10 '>
+      
+        <div className='bg-transparent flex justify-around items-center'>
+          <i className='bx bx-user bx-lg'></i> 
+          <motion.nav
+           className='flex sm:gap-10 lg:gap-20'>
+            {Navitems.map((item,index)=>(
+              <a href={item.href} key={index} className='relative'
+              onMouseEnter={()=>setHovered(index)}
+              onMouseExit={()=>setHovered(null)}>
+                {hovered===index &&(
+                  <motion.span layoutId="hovered-span" className='w-full h-full inset-0 absolute bg-neutral-300 rounded-md px-1 py-2 '></motion.span>
+                )}
+                <span className='text-5xl lg:text-5xl z-10 relative'>{item.title}</span>
+                
+              </a>
+            ))}
+          </motion.nav>
 
-                    <span className='z-10 relative '>{item.title}</span>
-                    </a>
-               
-        
-        ))}
         </div>
-    </div>
-    </Container>
-    
+        </div>
+   
   )
 }
 

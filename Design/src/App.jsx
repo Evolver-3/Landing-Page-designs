@@ -1,14 +1,8 @@
-import Content from "./component/Content"
-import Navbar from "./component/Navbar"
+import Navbar from './component/Navbar'
 
-const App=()=>{
-  return(
-    <>
-    <Navbar/>
-  <div className="min-h-screen flex  bg-neutral-400 dark:bg-gray-800">
-    <Content/>
-  </div>
-  </>
+const App = () => {
+  return (
+    <div className='w-screen h-screen bg-orange-400'><Navbar/></div>
   )
 }
 

@@ -36,14 +36,14 @@ const Navbar = () => {
   return (
     <Container>
 
-    <div className=' top-0 relative '>
+    <div className=' top-0 relative bg-orange-400 '>
       
-        <div className=' flex justify-around items-center '>
+        <div className=' flex justify-around items-center'>
 
           <i className='bx bx-user bx-sm '></i> 
 
           <motion.nav
-           className='flex gap-10 lg:gap-20 px-2 py-2'>
+           className='flex gap-5 lg:gap-20 px-2 py-2'>
 
             {Navitems.map((item,index)=>(
 

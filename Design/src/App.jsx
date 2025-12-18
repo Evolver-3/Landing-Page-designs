@@ -1,12 +1,14 @@
 import Body from './component/Body'
 import Navbar from './component/Navbar'
+import Testimonials from './component/Testimonials'
 
 const App = () => {
   return (
-    <div className=''>
+    <div className=' h-screen w-screen'>
       <Navbar/>
-    <div className='w-screen h-screen bg-neutral-500'>
+    <div className=' bg-neutral-500 '>
     <Body/>
+    <Testimonials/>
     </div>
     </div>
   )

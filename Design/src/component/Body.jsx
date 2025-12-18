@@ -1,17 +1,23 @@
-import Navbar from './Navbar'
-import Card from './Container'
+
+import Container from './Container'
 
 const Body = () => {
   return (
-    <Card className=''>
+    <Container className=''>
      
 
-     <div className='w-80 '>
-        <h2 className='text-7xl font-bold '>We <span className='text-yellow-300'>Sell Tiles</span> For Building </h2>
+     <div className=' flex flex-col mx-10 gap-10 mt-20 items-start'>
+        <h2 className='text-7xl font-bold '>We <span className='text-lime-400'>Sell Tiles</span> For Building Things</h2>
 
-        <p>Tiles are one of the most important</p>
+        <p className='text-3xl '>Tiles are one of the most important</p>
+
+        <button className='text-3xl text-white bg-lime-500 items-left w-60 h-20 rounded-sm'>Registration</button>
+
+        <div>
+          <img src='/tiles.jpg' alt='tiles' className='rounded-lg'></img>
+        </div>
      </div>
-    </Card>
+    </Container>
   )
 }
 

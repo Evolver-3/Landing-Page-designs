@@ -6,7 +6,7 @@ const Body = () => {
     <Container className=''>
      
 
-     <div className=' flex flex-col mx-10 gap-10 mt-20 items-start'>
+     <div className=' flex flex-col mx-10 gap-10 pt-30 items-center'>
         <h2 className='text-7xl font-bold '>We <span className='text-lime-400'>Sell Tiles</span> For Building Things</h2>
 
         <p className='text-3xl '>Tiles are one of the most important</p>

@@ -1,6 +1,6 @@
 import {motion} from 'motion/react'
 import Container from './Container';
-import { useEffect } from 'react';
+
 
 const text="Tiles are one of the most important Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, ad! Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores sequi deleniti corrupti nam fuga at non cum quia voluptatum impedit?"
 
@@ -13,7 +13,7 @@ const animateText={
 }
 
 const word={
-  hidden:{opacity:0,y:20},
+  hidden:{opacity:0,y:30},
   visible:{opacity:1, y:0}
 }
 
@@ -36,13 +36,13 @@ const Body = () => {
         variants={animateText}
         initial='hidden'
         whileInView="visible"
-         className='text-3xl text-center'>
+         className='text-2xl text-center'>
 
           {text.split(" ").map((w,i)=>(
             <motion.span
             key={i}
             variants={word}
-            className='inline-block mr-2'>
+            className='inline-block mr-4'>
               {w}
 
             </motion.span>

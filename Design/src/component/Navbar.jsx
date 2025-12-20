@@ -21,8 +21,8 @@ const Navbar = () => {
     },
     {
       id:4,
-      title:"Blog",
-      href:"/blog"
+      title:"Contact",
+      href:"/contact"
     },
     {
       id:5,

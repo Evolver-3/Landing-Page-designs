@@ -1,27 +1,37 @@
 import React from 'react'
 import Container from './Container'
-import {motion, useMotionTemplate,useMotionValue,animate
-} from 'motion/react'
-import { useEffect } from 'react'
+import {motion} from 'motion/react'
+
 
 const Testimonials = () => {
 
-  const COLORS=["#13FFAA","#1E67C6","#CE84CF","#DD335C"];
-  const color= useMotionValue(COLORS[0])
-  const border=useMotionTemplate `1px solid ${color}`
+  const textAni="We have worked with over 20+ customers, who just love over Lorem ipsum dolor sit amet consectetur adipisicing elit. Non sint eveniet veniam dolore ipsam ipsa mollitia soluta eaque, tempora dicta fuga officia omnis impedit obcaecati alias incidunt deserunt numquam nobis?"
 
-  const boxShadow=useMotionTemplate `2px 3px ${color}`
+  const animateText={
+    hidden:{opacity:0},
+    visible:{
+      opacity:1,
+      transition:{staggerChildren:0.08,delay:.2}
+    }
+  }
+
+  const wordAnimate={
+    hidden:{opacity:0,y:20},
+    visible:{opacity:1,y:0}
+  }
+
   
-  useEffect(()=>{
-    animate(color,COLORS,{boxShadow
-
-    })
-  })
-  
-
-  const tesDatas=[{id:1,title:"Classicals Houses",desc:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Non sint eveniet veniam dolore ipsam ipsa mollitia soluta eaque, tempora dicta fuga officia omnis impedit obcaecati alias incidunt deserunt numquam nobis?"},
-    {id:2,title:"Modern Houses",desc:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Non sint eveniet veniam dolore ipsam ipsa mollitia soluta eaque, tempora dicta fuga officia omnis impedit obcaecati alias incidunt deserunt numquam nobis?"},
-    {id:3,title:"Extravagant places",desc:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Non sint eveniet veniam dolore ipsam ipsa mollitia soluta eaque, tempora dicta fuga officia omnis impedit obcaecati alias incidunt deserunt numquam nobis?"}
+  const tesDatas=
+  [
+    {
+      id:1,title:"Classicals Houses",desc:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Non sint eveniet veniam dolore ipsam ipsa mollitia soluta eaque, tempora dicta fuga officia omnis impedit obcaecati alias incidunt deserunt numquam nobis?"
+    },
+    {
+      id:2,title:"Modern Houses",desc:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Non sint eveniet veniam dolore ipsam ipsa mollitia soluta eaque, tempora dicta fuga officia omnis impedit obcaecati alias incidunt deserunt numquam nobis?"
+    },
+    {
+      id:3,title:"Extravagant places",desc:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Non sint eveniet veniam dolore ipsam ipsa mollitia soluta eaque, tempora dicta fuga officia omnis impedit obcaecati alias incidunt deserunt numquam nobis?"
+    }
   ]
 
   return (
@@ -30,7 +40,21 @@ const Testimonials = () => {
       <div className='flex flex-col items-center justify-center gap-10 mx-30'>
         <h2 className='text-5xl '>Our Clients</h2>
 
-        <p className='text-2xl leading-tight text-center'>We have worked with over 20+ customers, who just love over Lorem ipsum dolor sit amet consectetur adipisicing elit. Non sint eveniet veniam dolore ipsam ipsa mollitia soluta eaque, tempora dicta fuga officia omnis impedit obcaecati alias incidunt deserunt numquam nobis?</p>
+        <motion.p
+        variants={animateText}
+        initial='hidden'
+        whileInView='visible'
+         
+         className='text-2xl leading-tight text-center'>
+          {textAni.split(" ").map((t,i)=>(
+            <motion.span
+            variants={wordAnimate}
+           
+            className='inline-block mr-4' key={i}>
+              {t}
+          </motion.span>
+          ))}
+         </motion.p>
 
         <span className='border border-b border-gray-700 w-100'></span>
       </div>

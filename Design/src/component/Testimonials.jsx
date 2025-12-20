@@ -42,14 +42,13 @@ const Testimonials = () => {
         <div className='grid grid-cols-2 lg:grid-cols-3 '>
           {tesDatas.map((item,index)=>(
             <motion.div
-            initial={{pathLength:0}}
-
-            style={{border,boxShadow,pathLength:1}}
-            transition={{duration:Infinity,ease:"linear"}}
-             key={index} className=' px-10 py-10 flex flex-col m-10 items-center justify-center dark:bg-lime-400 bg-white rounded-md text-white gap-4 dark:text-gray-500'>
+            initial={{rotateY:180}}
+            whileInView={{rotateY:0}}
+            transition={{duration:1,delay:.2}}
+             key={index} className=' px-10 py-10 flex flex-col m-10 items-center justify-center dark:bg-lime-400 bg-white rounded-md text-white gap-4 dark:text-gray-500 '>
               
               <h2 className='text-2xl font-bold text-gray-600 text-center'>{item.title}</h2>
-              <p className='text-sm text-bold text-center '>{item.desc}</p>
+              <p className='text-sm text-bold text-center'>{item.desc}</p>
             </motion.div>
             
           ))}

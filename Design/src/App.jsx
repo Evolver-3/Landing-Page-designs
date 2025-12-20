@@ -1,8 +1,9 @@
 import Body from './component/Body'
 import Contact from './component/Contact'
+
 import Navbar from './component/Navbar'
 import Testimonials from './component/Testimonials'
-import EffectPro from './EffectPro'
+
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
     <Body/>
     <Testimonials/>
     <Contact/>
+    
     </div> 
     </div>
   )

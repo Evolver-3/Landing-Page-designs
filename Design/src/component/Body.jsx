@@ -1,17 +1,56 @@
-
+import {motion, useAnimate, useMotionTemplate, useMotionValue} from 'motion/react'
 import Container from './Container'
+import { useEffect } from 'react';
+
+
 
 const Body = () => {
+
+
+ 
+  
+  
   return (
+
     <Container className=''>
      
 
-     <div className=' flex flex-col mx-10 gap-10 pt-30 items-center'>
-        <h2 className='text-7xl font-bold '>We <span className='text-lime-400'>Sell Tiles</span> For Building Things</h2>
+     <div className=' flex flex-col mx-10 gap-10 pt-30 items-center z-10'>
+        <h2 className='text-7xl font-bold text-center bg-gradient-to-br from-white to gray-500 bg-clip-text text-transparent'>We
+          <motion.span 
+          initial={{opacity:0}}
+          animate={{opacity:1}}
+          transition={{duration:.6,delay:.1}}
+          className='text-lime-400 relative'> Sell Tiles</motion.span> For Building Things</h2>
 
-        <p className='text-3xl '>Tiles are one of the most important</p>
+        <p className='text-3xl text-center'>Tiles are one of the most important Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, ad! Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores sequi deleniti corrupti nam fuga at non cum quia voluptatum impedit?</p>
 
-        <button className='text-3xl text-white bg-lime-500 items-left w-60 h-20 rounded-sm'>Registration</button>
+        <motion.button
+        whileHover={{scale:1.045}}
+        whileTap={{scale:.985}}
+         className='text-3xl text-white bg-lime-500 items-left w-56 h-20 rounded-sm relative cursor-pointer'>Registration
+          
+            <svg 
+            className='w-60 h-20 absolute top-0 -left-2 inset-0' width="158" height="55" viewBox="0 0 158 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <motion.path
+              initial={{pathLength:0}}
+            whileInView={{pathLength:1}}
+            
+            animate={{
+              stroke:["#13FFAA","#1E67C6","#CE84CF","#DD335C"] 
+            }}
+            transition={{
+              duration:4,
+              repeat:Infinity,
+              ease:"linear"
+            }}
+            
+              d="M1 1H157V53.5H1V1Z" 
+              stroke-width={3}/>
+            </svg>
+
+          
+        </motion.button>
 
         <div>
           <img src='/tiles.jpg' alt='tiles' className='rounded-lg'></img>

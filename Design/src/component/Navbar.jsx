@@ -36,14 +36,14 @@ const Navbar = () => {
   return (
     <Container>
 
-    <div className=' top-0 relative bg-orange-400 '>
+    <div className=' top-0 relative bg-lime-400 w-screen'>
       
         <div className=' flex justify-around items-center'>
 
           <i className='bx bx-user bx-sm '></i> 
 
           <motion.nav
-           className='flex gap-5 lg:gap-20 px-2 py-2'>
+           className='flex gap-1 lg:gap-20 px-2 py-2 '>
 
             {Navitems.map((item,index)=>(
 
@@ -52,9 +52,9 @@ const Navbar = () => {
               onMouseLeave={()=>setHovered(null)}>
 
                 {hovered===index &&(
-                  <motion.span layoutId="hovered-span" className='w-full h-full inset-0 absolute bg-neutral-300 rounded-md  '></motion.span>
+                  <motion.span layoutId="hovered-span" className='w-full h-full inset-0 absolute bg-lime-300 rounded-md '></motion.span>
                 )}
-                <span className='text-2xl lg:text-5xl z-10 relative'>{item.title}</span>
+                <span className='text-2xl lg:text-3xl z-10 relative'>{item.title}</span>
                 
               </a>
             ))}

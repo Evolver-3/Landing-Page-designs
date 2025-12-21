@@ -1,5 +1,6 @@
 import Body from './component/Body'
 import Contact from './component/Contact'
+import Footer from './component/Footer'
 
 import Navbar from './component/Navbar'
 import Testimonials from './component/Testimonials'
@@ -7,15 +8,18 @@ import Testimonials from './component/Testimonials'
 
 const App = () => {
   return (
-    <div className=' h-screen w-screen '>
+    <div className='w-full bg-neutral-500'>
+      <Navbar/>
+    
+    <div className='flex items-center flex-col gap-10'>
      
-    <Navbar/>
-    <div className=' bg-neutral-500 flex items-center flex-col'>
     <Body/>
     <Testimonials/>
     <Contact/>
     
+    
     </div> 
+    <Footer/>
     </div>
   )
 }

@@ -1,8 +1,18 @@
 import React, { useState } from 'react'
 import {motion} from 'motion/react'
-import Container from './Container';
+
 
 const Navbar = () => {
+
+  const varient={
+    hidden:{opacity:0,x:100},
+    visible:{opacity:1,x:0,
+      transition:{
+        delay:.2,duration:.5,ease:"easeOut"
+      }
+    }
+  }
+
   const Navitems=[
     {
       id:1,
@@ -30,13 +40,17 @@ const Navbar = () => {
       href:"/pricing"
     }
   ]
-  const [hovered,setHovered]=useState();
+  const [hovered,setHovered]=useState(false);
   
-
   return (
-    <Container>
+    
+    <motion.div
 
-    <div className=' top-0 relative bg-lime-400 w-screen'>
+    variants={varient}
+    initial="hidden"
+    whileInView='visible'
+  
+    className=' top-0 z-50 bg-lime-400'>
       
         <div className=' flex justify-around items-center'>
 
@@ -61,9 +75,8 @@ const Navbar = () => {
           </motion.nav>
 
         </div>
-        </div>
+    </motion.div>
 
-    </Container>
    
   )
 }

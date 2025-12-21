@@ -17,19 +17,28 @@ const word={
   visible:{opacity:1, y:0}
 }
 
+const animateImg={
+  hidden:{opacity:0,x:200},
+  visible:{
+    opacity:1,x:0,
+    transition:{delay:.1,duration:.3}
+  }
+}
+
+const animateFont={
+  initiail:{}
+}
+
 const Body = () => {
 
   return (
 
     <Container className=''>
      
-
      <div className=' flex flex-col mx-10 gap-10 pt-30 items-center z-10'>
         <h2 className='text-7xl font-bold text-center bg-gradient-to-br from-white to gray-500 bg-clip-text text-transparent'>We
           <motion.span 
-          initial={{opacity:0}}
-          animate={{opacity:1}}
-          transition={{duration:.6,delay:.1}}
+          
           className='text-lime-400 relative'> Sell Tiles</motion.span> For Building Things</h2>
 
         <motion.p
@@ -78,7 +87,11 @@ const Body = () => {
         </motion.button>
 
         <div>
-          <img src='/tiles.jpg' alt='tiles' className='rounded-lg'></img>
+          <motion.img
+          variants={animateImg}
+          initial='hidden'
+          whileInView='visible'
+           src='/tiles.jpg' alt='tiles' className='rounded-lg'></motion.img>
         </div>
      </div>
     </Container>

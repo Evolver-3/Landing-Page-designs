@@ -80,7 +80,7 @@ const Testimonials = () => {
         </div>
         <span className='border border-b border-gray-700 w-100'></span>
       </div>
-       <span className='border border-b border-gray-700 w-100'></span>
+       
     </div>
     </Container>
   )

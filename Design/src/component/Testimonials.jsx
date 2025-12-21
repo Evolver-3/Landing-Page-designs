@@ -69,10 +69,10 @@ const Testimonials = () => {
             initial={{rotateY:180}}
             whileInView={{rotateY:0}}
             transition={{duration:1,delay:.2}}
-             key={index} className=' px-10 py-10 flex flex-col m-10 items-center justify-center dark:bg-lime-400 bg-white rounded-md text-white gap-4 dark:text-gray-500 '>
-              
-              <h2 className='text-2xl font-bold text-gray-600 text-center'>{item.title}</h2>
-              <p className='text-sm text-bold text-center'>{item.desc}</p>
+             key={index} className=' px-10 py-10 flex flex-col m-10 items-center justify-center bg-lime-400 rounded-md text-white gap-4 dark:bg-lime-500 shadow- shadow-blue-400'>
+            
+              <h2 className='text-2xl font-bold text-gray-600 dark:text-white text-center'>{item.title}</h2>
+              <p className='text-sm text-bold text-center text-black'>{item.desc}</p>
             </motion.div>
             
           ))}

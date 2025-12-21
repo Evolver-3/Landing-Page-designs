@@ -47,7 +47,7 @@ const Footer = () => {
         <h2 className='text-3xl'>Stay Up to date</h2>
         <div className='flex items-center justify-around bg-gray-500 py-2 px-1 rounded-lg outline-1 text-md'>
           <input type='email' placeholder='Your Email Address' className='outline-none'></input>
-          <button className='cursor-pointer hover:text-black'><i class='bx  bx-send'></i> </button>
+          <button className='cursor-pointer hover:text-black'><i className='bx  bx-send'></i> </button>
         </div>
       </div>
 

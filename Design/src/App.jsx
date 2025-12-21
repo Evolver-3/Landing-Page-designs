@@ -8,10 +8,10 @@ import Testimonials from './component/Testimonials'
 
 const App = () => {
   return (
-    <div className='w-full bg-neutral-500'>
+    <div className='w-full dark:bg-neutral-500 overflow-x-hidden '>
       <Navbar/>
     
-    <div className='flex items-center flex-col gap-10'>
+    <div className=' flex items-center flex-col gap-10'>
      
     <Body/>
     <Testimonials/>

@@ -6,7 +6,7 @@ const Navbar = () => {
 
   const varient={
     hidden:{opacity:0,x:100},
-    visible:{opacity:1,x:0,
+    visible:{opacity:[.1,.2,.3,.4,.5,.6,.7,.8,.9,1],x:0,
       transition:{
         delay:.2,duration:.5,ease:"easeOut"
       }
@@ -50,7 +50,7 @@ const Navbar = () => {
     initial="hidden"
     whileInView='visible'
   
-    className=' top-0 z-50 bg-lime-400'>
+    className=' top-0 z-50 bg-lime-400 '>
       
         <div className=' flex justify-around items-center'>
 

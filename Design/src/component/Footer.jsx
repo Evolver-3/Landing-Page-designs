@@ -1,6 +1,19 @@
 import React from 'react'
+import {motion,useScroll} from 'motion/react'
+import { useRef } from 'react'
+
+
+const hanimate={
+  hidden:{opacity:0},
+  shake:{opacity:1,
+    transition:{staggerChildren:.04,delay:.7}
+  }
+
+}
 
 const Footer = () => {
+
+  const footerImg=[{id:1,img:"/insta.svg"},{id:2,img:"/facebook.svg"},{id:3,img:"/twitter.svg"}]
   return (
 
     <div className='bg-gray-700 flex flex-col items-center md:flex-row justify-center py-10 text-start text-white gap-8 md:gap-15'>
@@ -8,11 +21,14 @@ const Footer = () => {
         <h2 className='text-4xl'>SquareSells</h2>
         <p className='text-lg'>Copyright ©2025 <br>
         </br> All rights reserved.</p>
-        <div className='flex mx-5 gap-5'>
-          <img src='/insta.svg' alt="insta" className='w-10 rounded-md bg-white'></img>
-          <img src='/facebook.svg' alt="facebook" className='w-10 rounded-md bg-white'></img>
-          <img src='/twitter.svg' alt='twitter' className='w-10 rounded-md bg-white'></img>
-
+        <div className='flex gap-10 '>
+        {footerImg.map((foot,index)=>(
+          <motion.img
+          variants={hanimate}
+          initial='hidden'
+          whileInView='shake'
+          src={foot.img} key={index} className='w-10 rounded-md bg-white'></motion.img>
+        ))}
         </div>
       </div>
 

@@ -36,7 +36,7 @@ const Testimonials = () => {
 
   return (
     <Container>
-    <div className=' mt-40'>
+    <div className=' mt-40' id='community'>
       <div className='flex flex-col items-center justify-center gap-10 mx-30'>
         <h2 className='text-5xl font-semibold'>Our Clients</h2>
 

@@ -17,27 +17,22 @@ const Navbar = () => {
     {
       id:1,
       title:"Home",
-      href:"/home"
+      href:"#home"
     },
     {
       id:2,
-      title:"Features",
-      href:"/features"
+      title:"Items",
+      href:"#items"
     }
     ,{
       id:3,
       title:"Community",
-      href:"/community"
+      href:"#community"
     },
     {
       id:4,
       title:"Contact",
-      href:"/contact"
-    },
-    {
-      id:5,
-      title:"Pricing",
-      href:"/pricing"
+      href:"#contact"
     }
   ]
   const [hovered,setHovered]=useState(false);
@@ -54,7 +49,7 @@ const Navbar = () => {
       
         <div className=' flex justify-around items-center'>
 
-          <h2 className='text-xl font-semibold'>SquareSells</h2>
+          <h2 className='text-2xl font-semibold md:text-4xl text-white'>SquareSells</h2>
 
           <motion.nav
            className='flex gap-1 lg:gap-20 px-2 py-2 '>

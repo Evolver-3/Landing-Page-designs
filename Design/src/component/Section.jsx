@@ -45,7 +45,7 @@ const Section = () => {
   ]
   return (
     <Container>
-      <div className='flex items-center justify-center flex-col text-center gap-10' >
+      <div className='flex items-center justify-center flex-col text-center gap-10' id='items'>
        
         <h2 className='text-5xl font-semibold'>Browse here </h2>
         <p className='text-xl leading-tight '>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, quaerat. </p>
@@ -72,7 +72,9 @@ const Section = () => {
           </div>
         ))}
         </div>
+        <span className='border border-b border-gray-700 w-100'></span>
       </div>
+      
     </Container>
   )
 }

@@ -5,7 +5,7 @@ import {motion} from 'motion/react'
 const Contact = () => {
   return (
     <Container>
-      <div className='flex flex-col justify-center gap-10'>
+      <div className='flex flex-col justify-center gap-10' id='contact'>
         <h2 className='text-5xl text-center font-semibold'>Contact us for more details</h2>
 
         <form className='flex flex-col items-center gap-5 mt-5 dark:text-white justify-center border border-lg py-10 m-10 rounded-lg'>

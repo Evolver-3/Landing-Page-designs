@@ -3,6 +3,7 @@ import Contact from './component/Contact'
 import Footer from './component/Footer'
 
 import Navbar from './component/Navbar'
+import Section from './component/Section'
 import Testimonials from './component/Testimonials'
 
 
@@ -15,6 +16,7 @@ const App = () => {
      
     <Body/>
     <Testimonials/>
+    <Section/>
     <Contact/>
     
     

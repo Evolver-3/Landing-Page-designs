@@ -51,7 +51,7 @@ const bgShine=useTransform(
           <motion.span
           
           style={{backgroundPosition: bgShine}}
-          className='bg-gradient-to-r from-lime-400 via-white to-lime-400 text-transparent bg-clip-text bg-[length:200%]'>Sell Tiles</motion.span>{" "}For Building Things</motion.h2>
+          className='dark:bg-gradient-to-r from-lime-400 via-white to-lime-400 dark:text-transparent dark:bg-clip-text dark:bg-[length:200%] text-lime-400'>Sell Tiles</motion.span>{" "}For Building Things</motion.h2>
 
         <motion.p
         variants={animateText}

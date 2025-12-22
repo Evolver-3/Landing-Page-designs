@@ -54,7 +54,7 @@ const Navbar = () => {
       
         <div className=' flex justify-around items-center'>
 
-          <i className='bx bx-user bx-sm '></i> 
+          <h2 className='text-xl font-semibold'>SquareSells</h2>
 
           <motion.nav
            className='flex gap-1 lg:gap-20 px-2 py-2 '>

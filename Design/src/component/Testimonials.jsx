@@ -38,7 +38,7 @@ const Testimonials = () => {
     <Container>
     <div className=' mt-40'>
       <div className='flex flex-col items-center justify-center gap-10 mx-30'>
-        <h2 className='text-5xl '>Our Clients</h2>
+        <h2 className='text-5xl font-semibold'>Our Clients</h2>
 
         <motion.p
         variants={animateText}
@@ -60,7 +60,7 @@ const Testimonials = () => {
       </div>
 
       <div className='flex flex-col items-center justify-center mt-30 gap-10'>
-        <h2 className='text-5xl '>Why we are needed?</h2>
+        <h2 className='text-5xl font-semibold'>Why we are needed?</h2>
         <p className='text-2xl '>Who doesn't like furnished houses</p>
 
         <div className='grid grid-cols-2 lg:grid-cols-3 '>

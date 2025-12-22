@@ -1,5 +1,6 @@
 import React from 'react'
 import Container from './Container'
+import {motion} from 'motion/react'
 
 const Section = () => {
 
@@ -45,19 +46,32 @@ const Section = () => {
   return (
     <Container>
       <div className='flex items-center justify-center flex-col text-center gap-10' >
-        <h2 className='text-3xl font-semibold'>Browse here </h2>
+       
+        <h2 className='text-5xl font-semibold'>Browse here </h2>
         <p className='text-xl leading-tight '>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, quaerat. </p>
+
+        <div className='grid grid-cols-2 gap-10 mx-4'>
         {dataItems.map((item,index)=>(
           <div key={index}>
-            <img src={item.img} className='w-120 h-120 rounded-md shadow-lg '>
-            </img>
-            <div className='flex flex-col relative z-40 w-40 -top-13 left-40 bg-gray-700 '>
+            <motion.img
+            initial={{opacity:0,x:100}}
+            whileInView={{opacity:1,x:0}}
+            transition={{delay:.2,duration:.5,ease:"easeInOut"
+            }}
+
+             src={item.img} className='aspect-square rounded-md shadow-lg '>
+            </motion.img>
+            <motion.div
+            initial={{opacity:0,y:10}}
+            whileInView={{opacity:1,y:0}}
+            transition={{delay:.6,duration:.6,ease:"easeInOut"}}
+             className='flex flex-col relative z-40 w-40 md:w-80 -top-12 left-15 md:left-27 bg-gray-700'>
               <span className='text-white font-semibold'>{item.title}</span>
               <span className='text-orange-500'>{item.size}</span>
-            </div>
+            </motion.div>
           </div>
         ))}
-         
+        </div>
       </div>
     </Container>
   )
